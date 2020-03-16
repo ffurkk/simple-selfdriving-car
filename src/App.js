@@ -1,24 +1,61 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Game from './screens/Game';
+import Draw from './screens/Draw';
+import Play from './screens/Play';
 
 function App() {
+  const [mode, setMode] = useState('draw');
+  console.log(mode);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div style={{ backgroundColor: 'red' }}>
+      <div style={{ display: 'flex' }}>
+        <button
+          onClick={() => setMode('play')}
+          style={{
+            fontSize: '20px',
+            backgroundColor: 'blue',
+            display: 'flex',
+            justifyContent: 'center',
+            width: '50%',
+            height: '50px',
+            color: 'white',
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          Simple Algorithm
+        </button>
+        <button
+          onClick={() => setMode('draw')}
+          style={{
+            fontSize: '20px',
+            backgroundColor: 'blue',
+            display: 'flex',
+            justifyContent: 'center',
+            width: '50%',
+            height: '50px',
+            color: 'white',
+          }}
+        >
+          Draw
+        </button>
+        <button
+          onClick={() => setMode('game')}
+          style={{
+            fontSize: '20px',
+            backgroundColor: 'blue',
+            display: 'flex',
+            justifyContent: 'center',
+            width: '50%',
+            height: '50px',
+            color: 'white',
+          }}
+        >
+          Ai
+        </button>
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        {{ game: <Game />, draw: <Draw />, play: <Play /> }[mode] || <Draw />}
+      </div>
     </div>
   );
 }

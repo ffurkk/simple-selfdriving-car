@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+![ScreenShot](https://raw.githubusercontent.com/ffurkk/simple-selfdriving-car/master/Ekran%20Resmi%202020-03-16%2011.28.57.png)
+
 ## Available Scripts
 
 In the project directory, you can run:

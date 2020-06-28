@@ -10,8 +10,7 @@
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-p5-wrapper": "^2.0.0",
-    "react-scripts": "3.4.0",
-    "synaptic": "^1.1.4"
+    "react-scripts": "3.4.0"
   },
   "scripts": {
     "start": "react-scripts start",

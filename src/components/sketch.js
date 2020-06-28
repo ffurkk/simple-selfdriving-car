@@ -1,10 +1,7 @@
 const width = 700;
 const height = 500;
 let RADIUS = 20;
-let Save = false;
 export default function sketch(p) {
-  let canvas;
-
   p.myCustomRedrawAccordingToNewPropsHandler = function(newProps) {
     if (newProps.fillRadius) {
       RADIUS = newProps.fillRadius;
@@ -26,7 +23,7 @@ export default function sketch(p) {
   };
 
   p.setup = () => {
-    canvas = p.createCanvas(width, height);
+    p.createCanvas(width, height);
     p.noStroke();
     p.background(255);
   };
